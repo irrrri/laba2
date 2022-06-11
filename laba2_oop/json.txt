@@ -1,4 +1,0 @@
-{"strMember": "new str",
-"strtMember":1,
-"objMember":{"arrMamber":[1,2,3]}
-}
