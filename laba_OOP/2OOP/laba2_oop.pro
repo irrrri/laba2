@@ -10,15 +10,14 @@ CONFIG += c++11
 
 SOURCES += \
     checking.cpp \
-    filework.cpp \
-    jsonexeption.cpp \
+    fileworker.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     checking.h \
-    filework.h \
-    jsonexeption.h \
+    fileworker.h \
+    jsonChecker.h \
     mainwindow.h
 
 FORMS += \

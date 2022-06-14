@@ -192,7 +192,7 @@ void checking::checkObject(string str, int* i)
     delete[]strList;
 }
 
-//Array
+
 void checking::checkMassiv(string str, int* i)
 {
     *i=*i+1;
@@ -211,10 +211,9 @@ void checking::checkMassiv(string str, int* i)
         *i=*i+1;
 }
 
-void checking::checkValue1(string str)
+void checking::checkValue()
 {
     str=deleteSpaces(str);
-    this->str=str;
     for (int i = 0; i<int(str.length()); i++) {
         check_value_(str, &i);
     }

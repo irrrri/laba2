@@ -1,5 +1,5 @@
-#ifndef FILEWORK_H
-#define FILEWORK_H
+#ifndef FILEWORKER_H
+#define FILEWORKER_H
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -7,15 +7,15 @@
 #include <string.h>
 #include <iostream>
 
-class fileWork
+class fileWorker
 {
 private:
     char* filename;
     std::string str;
 public:
-    fileWork(char* filename);
+    fileWorker(char* filename);
     std::string getStr();
     void readData();
 };
 
-#endif // FILEWORK_H
+#endif // FILEWORKER_H

@@ -39,7 +39,7 @@ void MainWindow::on_fileDialog_clicked()
     if (FileName.isEmpty())
         QMessageBox::warning(this, "error", "file can't be opened");
     else{
-        fileWork fw(QstringToCharArray(FileName));
+        fileWorker fw(QstringToCharArray(FileName));
         fw.readData();
         checking ch(fw.getStr());
         try
@@ -48,7 +48,7 @@ void MainWindow::on_fileDialog_clicked()
             for (int i = 0; i < ch.getStr().length(); i++)
                 Qstr.append(QString(ch.getStr()[i]));
             ui->jsonLabel->setText(Qstr);
-            ch.checkValue1(ch.getStr());
+            ch.checkValue(ch.getStr());
             ui->errorLabel->setText("File is correct!!!");
             ui->placeLabel->setText(" ");
         }

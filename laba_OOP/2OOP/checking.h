@@ -6,7 +6,7 @@
 
 using namespace std;
 
-#include "jsonexeption.h"
+#include "jsonChecker.h"
 
 class checking
 {
@@ -24,26 +24,12 @@ private:
     string* checkName(string str, int* i, string* strList, int countOfNames);
 
 public:
-    class JsonException: public std::exception
-    {
-    private:
-        string msg;
-        int place;
-    public:
-        JsonException(string error, int place)
-        {
-            this->msg = error;
-            this->place=place;
-        }
-        int getPlace() {return place;}
-        string getMessage(){return msg;}
-    };
 
     checking(std::string s);
 
     std::string getStr();
 
-    void checkValue1(string str);
+    void checkValue();
 };
 
 #endif // CHECKING_H

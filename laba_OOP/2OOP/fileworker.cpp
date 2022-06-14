@@ -1,6 +1,6 @@
-#include "filework.h"
+#include "fileworker.h"
 
-void fileWork::readData()
+void fileWorker::readData()
 {
     FILE* file = fopen(this->filename, "r");
     std::string s;
@@ -14,16 +14,17 @@ void fileWork::readData()
     }
     fclose(file);
     this->str=s;
-    //delete[] line;
+    delete[] line;
+    delete [] this ->filename;
 }
 
-fileWork::fileWork(char* filename)
+fileWorker::fileWorker(char* filename)
 {
     this->filename=new char[strlen(filename)];
     strcpy(this->filename, filename);
 }
 
-std::string fileWork::getStr()
+std::string fileWorker::getStr()
 {
     return this->str;
 }

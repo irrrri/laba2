@@ -5,9 +5,10 @@
 #include <QFileDialog>
 #include <qmessagebox.h>
 
-#include "filework.h"
+#include "fileworker.h"
 #include "checking.h"
-#include "filework.h"
+#include "fileworker.h"
+#include "jsonChecker.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
